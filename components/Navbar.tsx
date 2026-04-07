@@ -24,7 +24,23 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <>
+      <style>{`
+        @keyframes slideDownMenu {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .mobile-menu-open {
+          animation: slideDownMenu 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+      `}</style>
+      <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo - Left */}
@@ -98,7 +114,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4 space-y-3">
+          <div className="md:hidden border-t border-gray-200 py-4 space-y-3 mobile-menu-open">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -130,5 +146,6 @@ export default function Navbar() {
         )}
       </div>
     </nav>
+    </>
   );
 }
