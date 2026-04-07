@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const DESTINATIONS = [
-  { id: 1, name: "France", flag: "🇫🇷", image: "/images/affiche.jpeg", position: "top-0 right-0" },
-  { id: 2, name: "Canada", flag: "🇨🇦", image: "/images/affiche2.jpeg", position: "top-0 left-0 md:top-40 md:left-32" },
-  { id: 3, name: "Belgique", flag: "🇧🇪", image: "/images/affiche3.jpeg", position: "bottom-0 right-8 md:bottom-12 md:right-0" },
+  { id: 1, name: "France", flag: "🇫🇷", image: "/images/destination_img.png", position: "top-0 right-0" },
+  { id: 2, name: "Canada", flag: "🇨🇦", image: "/images/destination_img1.png", position: "top-32 md:top-64 left-0" },
+  { id: 3, name: "Belgique", flag: "🇧🇪", image: "/images/destination_img2.png", position: "bottom-0 right-0 md:right-12" },
 ];
 
 export default function HeroSection() {
@@ -157,10 +157,10 @@ export default function HeroSection() {
               {DESTINATIONS.map((dest) => (
                 <div
                   key={dest.id}
-                  className={`dest-card absolute w-56 md:w-64 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer ${dest.position}`}
+                  className={`dest-card absolute w-72 md:w-96 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer ${dest.position}`}
                 >
                   {/* Image */}
-                  <div className="relative w-full h-72 md:h-80">
+                  <div className="relative w-full h-44 md:h-56">
                     <Image
                       src={dest.image}
                       alt={dest.name}
@@ -172,16 +172,6 @@ export default function HeroSection() {
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent" />
 
-                    {/* Badge destination */}
-                    <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between bg-white/95 backdrop-blur-sm rounded-lg px-4 py-3 shadow-md">
-                      <div>
-                        <div className="text-2xl">{dest.flag}</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="font-bold text-gray-900 text-lg">{dest.name}</div>
-                        <div className="text-xs text-gray-500">Immigration</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               ))}

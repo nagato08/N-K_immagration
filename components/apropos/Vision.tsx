@@ -177,7 +177,7 @@ const Vision = () => {
             <div className="mt-4 flex items-center justify-center gap-2">
               <div className="h-px w-8" style={{ background: "#B8A76F" }} />
               <span className="text-xs font-medium uppercase tracking-wider" style={{ color: "#1A2B5F" }}>
-                N&K Immigration
+                N&K Immigration Agency
               </span>
             </div>
           </div>

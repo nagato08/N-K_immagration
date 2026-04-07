@@ -107,7 +107,7 @@ const Form = () => {
       const message = `*Nouveau Message de Contact*%0A%0A*Nom:* ${encodeURIComponent(formData.name)}%0A*Téléphone:* ${encodeURIComponent(formData.number)}%0A*Email:* ${encodeURIComponent(formData.email)}%0A*Ville:* ${encodeURIComponent(formData.ville)}%0A%0A*Message:*%0A${encodeURIComponent(formData.message)}`;
 
       // Ouvrir WhatsApp avec le message
-      const whatsappUrl = `https://wa.me/237655118623?text=${message}`;
+      const whatsappUrl = `https://wa.me/237688694728?text=${message}`;
       window.open(whatsappUrl, "_blank");
 
       alert("Redirection vers WhatsApp en cours...");
@@ -376,7 +376,7 @@ const Form = () => {
               <div className="space-y-4">
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/237655118623?text=Salut%20je%20suis%20intéressé%20par%20vos%20services%20d'immigration"
+                  href="https://wa.me/237688694728?text=Salut%20je%20suis%20intéressé%20par%20vos%20services%20d'immigration"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
@@ -388,7 +388,7 @@ const Form = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">WhatsApp</p>
-                    <p className="font-semibold text-gray-900">+237 655 11 86 23</p>
+                    <p className="font-semibold text-gray-900">+237 688 69 47 28</p>
                   </div>
                 </a>
 
@@ -401,7 +401,7 @@ const Form = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Téléphone</p>
-                    <p className="font-semibold text-gray-900">+237 670 35 92 59</p>
+                    <p className="font-semibold text-gray-900">+237 688 69 47 28</p>
                   </div>
                 </div>
 
