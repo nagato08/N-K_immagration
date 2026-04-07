@@ -62,13 +62,12 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* ── Overlay aux couleurs N&K Immigration ── */}
+      {/* ── Overlay ── */}
       <div
         aria-hidden="true"
         className="absolute inset-0"
         style={{
-          background:
-            "linear-gradient(105deg, rgba(22,30,43,0.82) 0%, rgba(184,167,111,0.50) 45%, rgba(22,30,43,0.45) 100%)",
+          background: "rgba(22, 30, 43, 0.65)",
         }}
       />
       {/* Grain texture */}

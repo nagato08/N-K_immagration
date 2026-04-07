@@ -1,183 +1,117 @@
 "use client";
 
-import { Heart, Shield, Target, Users } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
-interface Value {
-  icon: React.ComponentType<{ size: number; className: string }>;
-  title: string;
-  description: string;
-}
+const About = () => {
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
 
-const VALUES: Value[] = [
-  {
-    icon: Heart,
-    title: "Passion",
-    description:
-      "Nous aimons ce que nous faisons. Chaque dossier est traité avec dévouement et enthousiasme pour votre réussite.",
-  },
-  {
-    icon: Shield,
-    title: "Fiabilité",
-    description:
-      "Vous pouvez compter sur nous. Nous garantissons un suivi rigoureux et des résultats conformes aux normes internationales.",
-  },
-  {
-    icon: Target,
-    title: "Expertise",
-    description:
-      "Notre équipe maîtrise les procédures d'immigration. Nous restons à jour avec les exigences légales de chaque pays.",
-  },
-  {
-    icon: Users,
-    title: "Soutien",
-    description:
-      "Vous n'êtes jamais seul. Nous vous accompagnons à chaque étape avec un soutien personnalisé et attentif.",
-  },
-];
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) setVisible(true); },
+      { threshold: 0.12 }
+    );
+    if (ref.current) obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
 
-export default function About() {
   return (
-    <section className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Section 1: Mission */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-                Notre <span style={{ color: "#B8A76F" }}>Mission</span>
-              </h2>
-              <p className="font-poppins text-gray-600 text-lg mb-4 leading-relaxed">
-                Chez NK Immigration, notre mission est simple mais puissante: transformer les rêves
-                d&apos;immigration en réalité.
-              </p>
-              <p className="font-poppins text-gray-600 text-lg leading-relaxed">
-                Nous croyons que chaque individu mérite la chance de réaliser ses ambitions à l&apos;étranger.
-                Grâce à notre expertise et notre dévouement, nous facilitons ce parcours souvent complexe
-                en offrant un soutien complet et personnalisé.
-              </p>
-            </div>
-            <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 border border-gray-200">
-              <div className="space-y-4">
-                <div className="flex gap-4">
-                  <div
-                    className="w-1 flex-shrink-0 rounded"
-                    style={{ backgroundColor: "#B8A76F" }}
-                  />
-                  <div>
-                    <h4 className="font-poppins font-semibold text-gray-900 mb-1">Procédures Simplifiées</h4>
-                    <p className="font-poppins text-sm text-gray-600">
-                      Nous démystifions les démarches administratives complexes
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div
-                    className="w-1 flex-shrink-0 rounded"
-                    style={{ backgroundColor: "#B8A76F" }}
-                  />
-                  <div>
-                    <h4 className="font-poppins font-semibold text-gray-900 mb-1">Taux de Réussite Élevé</h4>
-                    <p className="font-poppins text-sm text-gray-600">
-                      Plus de 20 dossiers traités avec succès
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div
-                    className="w-1 flex-shrink-0 rounded"
-                    style={{ backgroundColor: "#B8A76F" }}
-                  />
-                  <div>
-                    <h4 className="font-poppins font-semibold text-gray-900 mb-1">Soutien 24/7</h4>
-                    <p className="font-poppins text-sm text-gray-600">
-                      Disponibles pour répondre à vos questions à tout moment
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <>
+      <style>{`
+        @keyframes fadeUpAD {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInAD {
+          from { opacity: 0; }
+          to   { opacity: 1; }
+        }
+        .adv .ad-u1   { animation: fadeUpAD  0.75s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+        .adv .ad-u2   { animation: fadeUpAD  0.75s cubic-bezier(0.22,1,0.36,1) 0.20s both; }
+        .adv .ad-logo { animation: fadeInAD  0.90s cubic-bezier(0.22,1,0.36,1) 0.30s both; }
+      `}</style>
 
-        {/* Section 2: Valeurs */}
-        <div className="mb-20">
-          <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Nos <span style={{ color: "#B8A76F" }}>Valeurs</span>
-          </h2>
-          <p className="font-poppins text-gray-600 text-center text-lg max-w-2xl mx-auto mb-12">
-            Ces principes fondamentaux guident notre travail quotidien et nos interactions avec nos clients
+      <section
+        ref={ref}
+        className={`relative bg-white py-6 lg:py-12 ${visible ? "adv" : ""}`}
+      >
+        {/* Filet or haut */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#B8A76F]/30 to-transparent"
+        />
+
+        <div className="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-16 xl:px-20">
+
+          {/* Label section */}
+          <div className="ad-u1 flex items-center gap-3 mb-8">
+            <div className="w-8 h-0.5 bg-[#B8A76F] rounded-sm" />
+            <span className="text-xs md:text-md lg:text-lg font-semibold uppercase tracking-[0.22em]" style={{ color: "#B8A76F" }}>
+              À propos de nous
+            </span>
+          </div>
+
+          {/* Intro pleine largeur */}
+          <p className="ad-u1 text-[clamp(0.9rem,1.25vw,1.05rem)] font-medium text-gray-800 leading-relaxed text-justify mb-5">
+            N&K Immigration Agency est une agence spécialisée dans l&apos;accompagnement complet des projets d&apos;immigration.
+            Forte d&apos;une expertise solide et d&apos;une approche innovante, N&K Immigration accompagne ses clients à chaque étape
+            de leurs démarches administratives avec professionnalisme, rigueur et transparence. Nous offrons une gamme complète
+            de services couvrant les visas de travail, d&apos;études, touristiques et d&apos;affaires.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {VALUES.map((value, index) => {
-              const Icon = value.icon;
-              return (
+          {/* Logo + texte secondaire */}
+          <div className="ad-u2 grid items-center gap-5 md:grid-cols-[300px_1fr] lg:grid-cols-[340px_1fr]">
+
+            {/* Logo */}
+            <div className="ad-logo flex items-center justify-center">
+              <div className="relative w-70 h-87 overflow-hidden rounded-lg shadow-lg">
+                <Image
+                  src="/images/pdg.jpeg"
+                  alt="PDG N&K Immigration"
+                  width={300}
+                  height={380}
+                  className="object-cover w-full h-full"
+                  priority
+                />
+                {/* Ombre du bas vers le texte */}
                 <div
-                  key={index}
-                  className="p-6 rounded-xl border border-gray-200 bg-gray-50 hover:border-gray-300 transition-all duration-300 hover:shadow-md"
-                >
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center mb-4 flex-shrink-0"
-                    style={{ backgroundColor: "#B8A76F" }}
-                  >
-                    <Icon size={24} className="text-white" />
-                  </div>
-                  <h3 className="font-poppins text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
-                  <p className="font-poppins text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                  className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+                  style={{
+                    background: "linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%)",
+                  }}
+                />
+                {/* Nom en bas à gauche */}
+                <div className="absolute bottom-3 left-4 z-10">
+                  <p className="text-white font-black text-sm leading-tight drop-shadow-md">
+                    N&K Immigration
+                  </p>
+                  <p className="text-white/90 text-[11px] font-medium mt-0.5">
+                    Leadership &amp; Expertise
+                  </p>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+
+            {/* Texte secondaire */}
+            <p className="text-[clamp(0.88rem,1.2vw,1.02rem)] font-medium text-gray-800 leading-relaxed text-justify">
+              Depuis notre fondation, nous intervenons dans tous les domaines de l&apos;immigration : consultation, préparation
+              de dossiers, suivi administratif, ainsi que des services d&apos;accompagnement personnalisé et de réservation d&apos;hébergement.
+              Notre approche est axée sur la qualité, la fiabilité et le respect des délais. De l&apos;évaluation initiale à l&apos;obtention
+              du visa, en passant par la gestion des dossiers et le suivi technique, nous accompagnons nos clients à chaque étape.
+              Nous assurons également un soutien continu pour garantir une transition réussie vers votre nouvelle destination.
+            </p>
           </div>
         </div>
 
-        {/* Section 3: Approche */}
-        <div className="bg-gradient-to-r from-gray-50 to-white border border-gray-200 rounded-2xl p-8 md:p-12">
-          <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Notre <span style={{ color: "#B8A76F" }}>Approche</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-                style={{ backgroundColor: "#B8A76F" }}
-              >
-                <span className="text-white font-bold text-xl">1</span>
-              </div>
-              <h4 className="font-poppins text-xl font-semibold text-gray-900 mb-3">Consultation</h4>
-              <p className="font-poppins text-gray-600">
-                Nous comprenons vos objectifs et évaluons votre situation pour un projet personnalisé.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-                style={{ backgroundColor: "#B8A76F" }}
-              >
-                <span className="text-white font-bold text-xl">2</span>
-              </div>
-              <h4 className="font-poppins text-xl font-semibold text-gray-900 mb-3">Préparation</h4>
-              <p className="font-poppins text-gray-600">
-                Notre équipe prépare tous les documents nécessaires avec attention aux détails.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
-                style={{ backgroundColor: "#B8A76F" }}
-              >
-                <span className="text-white font-bold text-xl">3</span>
-              </div>
-              <h4 className="font-poppins text-xl font-semibold text-gray-900 mb-3">Suivi</h4>
-              <p className="font-poppins text-gray-600">
-                Nous suivons votre dossier jusqu&apos;à son aboutissement avec rapports réguliers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        {/* Filet or bas */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#B8A76F]/20 to-transparent"
+        />
+      </section>
+    </>
   );
-}
+};
+
+export default About;

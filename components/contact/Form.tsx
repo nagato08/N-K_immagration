@@ -452,7 +452,7 @@ const Form = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-poppins text-sm font-semibold text-gray-900">NK Immigration</p>
+                  <p className="font-poppins text-sm font-semibold text-gray-900">N&K Immigration Angency</p>
                   <p className="text-xs text-gray-500">Douala — Bepanda, Cameroun</p>
                 </div>
               </div>

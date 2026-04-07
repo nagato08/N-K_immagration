@@ -155,10 +155,10 @@ export default function DestinationGrid() {
         {/* CTA Section */}
         <div className="mt-20 text-center">
           <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Vous n'avez pas trouvé votre destination?
+            Vous n&apos;avez pas trouvé votre destination?
           </h2>
           <p className="font-poppins text-gray-600 mb-8 max-w-2xl mx-auto">
-            Contactez-nous pour explorer d'autres possibilités ou discuter de votre destination spécifique.
+            Contactez-nous pour explorer d&apos;autres possibilités ou discuter de votre destination spécifique.
           </p>
           <a
             href="/contact"

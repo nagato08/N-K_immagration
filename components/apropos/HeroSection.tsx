@@ -1,59 +1,111 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
-    <section className="w-full bg-gradient-to-b from-white to-gray-50 py-12 md:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="mb-4">
+    <section className="relative w-full overflow-hidden h-[40vh] md:h-[50vh] min-h-80">
+      <style>{`
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(28px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes kenburns {
+          0%   { transform: scale(1.06) translate(0%, 0%); }
+          50%  { transform: scale(1.11) translate(-1%, -0.8%); }
+          100% { transform: scale(1.06) translate(0%, 0%); }
+        }
+        @keyframes shimmerGold {
+          0%   { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+
+        .hero-img { animation: kenburns 18s ease-in-out infinite; }
+
+        .hero-badge  { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.15s both; }
+        .hero-title  { animation: fadeUp 0.85s cubic-bezier(0.22,1,0.36,1) 0.30s both; }
+        .hero-sub    { animation: fadeUp 0.85s cubic-bezier(0.22,1,0.36,1) 0.50s both; }
+
+        .shimmer-gold {
+          background: linear-gradient(90deg, #B8A76F 0%, #D4C28A 35%, #B8A76F 55%, #9D8F5C 85%, #B8A76F 100%);
+          background-size: 200% auto;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: shimmerGold 4s linear infinite;
+        }
+      `}</style>
+
+      {/* Image de fond */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="/images/hero_about.png"
+          alt="NK Immigration – À propos"
+          fill
+          priority
+          className="object-cover hero-img"
+          style={{ transformOrigin: "center center" }}
+          sizes="100vw"
+        />
+      </div>
+
+      {/* Overlay */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background: "rgba(22, 30, 43, 0.65)",
+        }}
+      />
+
+      {/* Grain texture */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          opacity: 0.04,
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+          backgroundSize: "200px 200px",
+        }}
+      />
+
+      {/* Liseré or en bas */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-px"
+        style={{ background: "linear-gradient(90deg, transparent, #B8A76F, transparent)" }}
+      />
+
+      {/* Contenu */}
+      <div className="relative z-10 flex items-center justify-center h-full w-full">
+        <div className="mx-auto w-full px-6 md:px-10 lg:px-16 text-center" style={{ maxWidth: 800 }}>
+          {/* Badge */}
+          <div className="hero-badge mb-6">
             <span
-              className="font-poppins text-sm font-semibold uppercase tracking-widest"
+              className="inline-block text-sm font-semibold uppercase tracking-wider text-white"
               style={{ color: "#B8A76F" }}
             >
               Qui Sommes-Nous
             </span>
           </div>
 
-          <h1 className="font-poppins text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            NK <span style={{ color: "#B8A76F" }}>Immigration</span>
+          {/* Titre */}
+          <h1
+            className="hero-title text-white leading-none tracking-[-0.03em]"
+            style={{
+              fontSize: "clamp(2.2rem, 4vw, 3.8rem)",
+              fontWeight: 700,
+            }}
+          >
+            N&K <span className="shimmer-gold">Immigration Agency</span>
           </h1>
 
-          <p className="font-poppins text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+          {/* Sous-titre */}
+          <p
+            className="hero-sub text-white/85 mt-6"
+            style={{ fontSize: "clamp(1rem, 1.5vw, 1.25rem)" }}
+          >
             L&apos;immigration c&apos;est notre affaire, la réussite c&apos;est la vôtre
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-          <div className="text-center">
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-              style={{ backgroundColor: "#B8A76F" }}
-            >
-              <span className="text-3xl text-white font-bold">2+</span>
-            </div>
-            <h3 className="font-poppins text-2xl font-bold text-gray-900 mb-2">Ans</h3>
-            <p className="font-poppins text-gray-600">d&apos;expérience en immigration</p>
-          </div>
-
-          <div className="text-center">
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-              style={{ backgroundColor: "#B8A76F" }}
-            >
-              <span className="text-3xl text-white font-bold">20+</span>
-            </div>
-            <h3 className="font-poppins text-2xl font-bold text-gray-900 mb-2">Dossiers</h3>
-            <p className="font-poppins text-gray-600">traités avec succès</p>
-          </div>
-
-          <div className="text-center">
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-              style={{ backgroundColor: "#B8A76F" }}
-            >
-              <span className="text-3xl text-white font-bold">14+</span>
-            </div>
-            <h3 className="font-poppins text-2xl font-bold text-gray-900 mb-2">Destinations</h3>
-            <p className="font-poppins text-gray-600">couvertes mondialement</p>
-          </div>
         </div>
       </div>
     </section>
