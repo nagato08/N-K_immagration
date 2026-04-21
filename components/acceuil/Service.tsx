@@ -50,11 +50,10 @@ const services = [
 
 const GOLD = "#B8A76F";
 const GOLD_LIGHT = "#F5F0E8";
-const GOLD_MID = "#D4C28A";
 
 export default function Service() {
   return (
-    <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="w-full py-12 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -132,15 +131,14 @@ export default function Service() {
                 </p>
 
                 {/* Link */}
-                <Link
-                  href="/services"
+                <div
                   className="font-poppins mt-5 flex items-center gap-1.5 text-sm font-medium
                              opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{ color: GOLD }}
                 >
                   En savoir plus
                   <ArrowRight size={14} strokeWidth={2} />
-                </Link>
+                </div>
 
                 {/* Bottom border accent */}
                 <div

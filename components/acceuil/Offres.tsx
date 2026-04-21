@@ -17,7 +17,7 @@ export default function Offres() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="w-full py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+    <section className="w-full py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
@@ -107,11 +107,6 @@ export default function Offres() {
             </div>
           </div>
         </div>
-
-        {/* SUBTITLE */}
-        <p className="text-center text-gray-500 font-poppins mt-12 sm:mt-16 italic text-sm sm:text-base">
-          Choisissez une offre pour découvrir toutes nos opportunités...
-        </p>
       </div>
 
       {/* MODAL */}

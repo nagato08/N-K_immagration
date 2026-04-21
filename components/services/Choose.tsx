@@ -143,7 +143,7 @@ export default function Choose() {
   const headerInView = useInView(headerRef, { once: true });
 
   return (
-    <section className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="w-full py-2 md:py-3 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div

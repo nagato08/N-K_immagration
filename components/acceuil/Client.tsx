@@ -163,7 +163,7 @@ export default function Client() {
           <div className="av-2 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
 
             {/* ── Avis featured (grande carte) ── */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 w-full">
               <div
                 key={actif}
                 className="avis-slide relative bg-white border border-gray-900/10 p-8 md:p-10"
@@ -255,7 +255,7 @@ export default function Client() {
             </div>
 
             {/* ── Liste des autres avis ── */}
-            <div className="lg:col-span-2 flex flex-col gap-3">
+            <div className="hidden lg:flex lg:col-span-2 flex-col gap-3">
               {avis.map((a, i) => (
                 <button
                   key={i}

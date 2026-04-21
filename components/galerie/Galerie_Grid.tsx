@@ -57,12 +57,24 @@ const FILTERS: { label: string; value: ImageCategory }[] = [
 
 export default function GalerieGrid() {
   const [activeFilter, setActiveFilter] = useState<ImageCategory>("all");
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const filteredImages =
     activeFilter === "all"
       ? GALLERY_IMAGES
       : GALLERY_IMAGES.filter((img) => img.category === activeFilter);
+
+  const goToPrevious = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + filteredImages.length) % filteredImages.length);
+    }
+  };
+
+  const goToNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % filteredImages.length);
+    }
+  };
 
   return (
     <>
@@ -221,15 +233,15 @@ export default function GalerieGrid() {
           </div>
 
           {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
-            {filteredImages.map((image) => (
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4">
+            {filteredImages.map((image, index) => (
               <div
                 key={image.id}
                 className="gallery-item"
               >
                 <div
                   className="gallery-image-wrapper"
-                  onClick={() => setSelectedImage(image.src)}
+                  onClick={() => setSelectedIndex(index)}
                 >
                   <Image
                     src={image.src}
@@ -270,38 +282,65 @@ export default function GalerieGrid() {
       </section>
 
       {/* Modal */}
-      {/* Modal */}
-{selectedImage && (
-  <div
-    className="modal-overlay fixed inset-0 bg-black/90 flex items-center justify-center p-4"
-    style={{ zIndex: 9999 }}
-    onClick={() => setSelectedImage(null)}
-  >
-    <div
-      className="modal-content relative w-full max-w-5xl max-h-[90vh] flex items-center justify-center"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        onClick={() => setSelectedImage(null)}
-        className="close-btn"
-        aria-label="Fermer"
-      >
-        <X size={28} strokeWidth={2} />
-      </button>
+      {selectedIndex !== null && (
+        <div
+          className="modal-overlay fixed inset-0 bg-black/90 flex items-center justify-center p-4"
+          style={{ zIndex: 9999 }}
+          onClick={() => setSelectedIndex(null)}
+        >
+          <div
+            className="modal-content relative w-full max-w-5xl max-h-[90vh] flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Bouton Fermer */}
+            <button
+              onClick={() => setSelectedIndex(null)}
+              className="close-btn"
+              aria-label="Fermer"
+            >
+              <X size={28} strokeWidth={2} />
+            </button>
 
-      {/* Conteneur corrigé pour Image */}
-      <div className="relative w-full h-[80vh] bg-black/50 rounded-lg overflow-hidden flex items-center justify-center">
-        <Image
-          src={selectedImage}
-          alt="Image agrandie"
-          fill
-          className="object-contain"
-          priority
-        />
-      </div>
-    </div>
-  </div>
-)}
+            {/* Flèche Précédent */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 z-10 w-12 h-12 flex items-center justify-center text-white hover:bg-white/20 transition-colors rounded-full"
+              aria-label="Image précédente"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6">
+                <path d="M15 19l-7-7 7-7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+
+            {/* Conteneur Image */}
+            <div className="relative w-full h-[80vh] bg-black/50 rounded-lg overflow-hidden flex items-center justify-center">
+              <Image
+                src={filteredImages[selectedIndex].src}
+                alt={filteredImages[selectedIndex].alt}
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            {/* Flèche Suivant */}
+            <button
+              onClick={goToNext}
+              className="absolute right-4 z-10 w-12 h-12 flex items-center justify-center text-white hover:bg-white/20 transition-colors rounded-full"
+              aria-label="Image suivante"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6">
+                <path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+
+            {/* Compteur */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-poppins">
+              {selectedIndex + 1} / {filteredImages.length}
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

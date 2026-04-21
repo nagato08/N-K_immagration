@@ -61,7 +61,7 @@ const Cta = () => {
 
           {/* RIGHT IMAGE */}
           <div className="relative h-96 sm:h-[500px] w-full">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-full h-full overflow-hidden">
               <Image
                 src="/images/image.webp"
                 alt="Destination immigration"

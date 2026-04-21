@@ -53,7 +53,7 @@ export default function ServicesList() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="w-full py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">
           <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
@@ -78,7 +78,7 @@ export default function ServicesList() {
                   <p className="font-poppins text-gray-600 hidden md:block">{service.description}</p>
                 </div>
                 <div
-                  className={`flex-shrink-0 transition-transform duration-300 ${
+                  className={`shrink-0 transition-transform duration-300 ${
                     expandedIndex === index ? "rotate-180" : ""
                   }`}
                   style={{ color: "#B8A76F" }}
@@ -104,7 +104,7 @@ export default function ServicesList() {
                       {service.benefits.map((benefit, i) => (
                         <div key={i} className="flex gap-3 items-start">
                           <div
-                            className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
+                            className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5"
                             style={{ backgroundColor: "#B8A76F" }}
                           >
                             <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

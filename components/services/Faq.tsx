@@ -77,7 +77,7 @@ function FAQItemComponent({ item, index }: { item: FAQItem; index: number }) {
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="flex-shrink-0 mt-1"
+          className="shrink-0 mt-1"
           style={{ color: "#B8A76F" }}
         >
           <ChevronDown size={24} />
@@ -105,7 +105,7 @@ export default function Faq() {
   const headerInView = useInView(headerRef, { once: true });
 
   return (
-    <section className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-white to-gray-50">
+    <section className="w-full py-8 md:py-12 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-white to-gray-50">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
