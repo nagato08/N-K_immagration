@@ -53,7 +53,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 overflow-hidden">
         <Image
           src="/images/hero_contact.png"
-          alt="N&K Immigration – Contactez-nous"
+          alt="Ntchoupe Immigration – Contactez-nous"
           fill
           priority
           className="object-cover hero-img"

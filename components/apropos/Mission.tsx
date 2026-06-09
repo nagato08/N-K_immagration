@@ -204,7 +204,7 @@ const Mission = () => {
               <span className="shimmer-text">en réalité d&apos;immigration</span>
             </h2>
             <p className="mt-4 text-gray-500 text-sm md:text-base max-w-2xl leading-relaxed">
-              N&K Immigration accompagne les individus et les professionnels dans la réalisation
+              Ntchoupe Immigration accompagne les individus et les professionnels dans la réalisation
               de leurs projets d&apos;immigration, de la consultation initiale à l&apos;obtention du visa,
               avec expertise, transparence et un soutien personnalisé reconnu.
             </p>
@@ -259,7 +259,7 @@ const Mission = () => {
                 <div className="relative w-full h-72 md:h-80">
                   <Image
                     src="/images/mission1.png"
-                    alt="N&K Immigration Mission"
+                    alt="Ntchoupe Immigration Mission"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 380px"

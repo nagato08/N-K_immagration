@@ -14,7 +14,7 @@ const Vision = () => {
             <div className="bg-gray-100 rounded-2xl p-8 w-full max-w-md">
               <Image
                 src="/logo_remove.png"
-                alt="NK Immigration Logo"
+                alt="Ntchoupe Immigration Logo"
                 width={300}
                 height={300}
                 className="w-full h-auto"
@@ -26,7 +26,7 @@ const Vision = () => {
           <div className="space-y-6">
             <div>
               <h2 className="text-4xl font-bold mb-2">
-                <span style={{ color: '#B8A76F' }}>N&K Immigration Agency</span>
+                <span style={{ color: '#B8A76F' }}>Ntchoupe Immigration Agency</span>
                 {' '}– Votre partenaire
                 <br />
                 de confiance en immigration

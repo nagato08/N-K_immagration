@@ -7,7 +7,7 @@ const avis = [
     nom: "Marie Nkomo",
     poste: "Travailleuse en Allemagne",
     texte:
-      "N&K Immigration m'a accompagnée tout au long de mon projet de visa de travail en Allemagne. Leur équipe est très professionnelle, réactive et m'a guidée à chaque étape. J'ai pu concrétiser mon rêve grâce à eux. Je recommande vivement!",
+      "Ntchoupe Immigration m'a accompagnée tout au long de mon projet de visa de travail en Allemagne. Leur équipe est très professionnelle, réactive et m'a guidée à chaque étape. J'ai pu concrétiser mon rêve grâce à eux. Je recommande vivement!",
     note: 5,
     initiales: "MN",
     couleur: "#B8A76F",
@@ -16,7 +16,7 @@ const avis = [
     nom: "Paul Fotso",
     poste: "Étudiant en Australie",
     texte:
-      "Grâce à N&K Immigration, j'ai obtenu mon visa d'études pour l'Australie sans complications. Leur connaissance des procédures est impressionnante et ils m'ont sauvé du stress administratif. Équipe de confiance!",
+      "Grâce à Ntchoupe Immigration, j'ai obtenu mon visa d'études pour l'Australie sans complications. Leur connaissance des procédures est impressionnante et ils m'ont sauvé du stress administratif. Équipe de confiance!",
     note: 4,
     initiales: "PF",
     couleur: "#B8A76F",
@@ -25,7 +25,7 @@ const avis = [
     nom: "Amandine Tchamba",
     poste: "Entrepreneur au Canada",
     texte:
-      "J'ai travaillé avec N&K Immigration pour mon visa d'affaires au Canada. Ils ont géré tous les détails complexes avec rigueur et professionnalisme. En tant qu'entrepreneur, j'apprécie leur expertise et leur suivi régulier.",
+      "J'ai travaillé avec Ntchoupe Immigration pour mon visa d'affaires au Canada. Ils ont géré tous les détails complexes avec rigueur et professionnalisme. En tant qu'entrepreneur, j'apprécie leur expertise et leur suivi régulier.",
     note: 4,
     initiales: "AT",
     couleur: "#B8A76F",
@@ -34,7 +34,7 @@ const avis = [
     nom: "David Etoundi",
     poste: "Travailleur en France",
     texte:
-      "N&K Immigration a été mon meilleur choix pour mon projet de travail en France. Leur approche personnalisée et leur accompagnement de A à Z m'ont permis d'arriver sans stress. Merci pour tout!",
+      "Ntchoupe Immigration a été mon meilleur choix pour mon projet de travail en France. Leur approche personnalisée et leur accompagnement de A à Z m'ont permis d'arriver sans stress. Merci pour tout!",
     note: 5,
     initiales: "DE",
     couleur: "#B8A76F",
@@ -43,7 +43,7 @@ const avis = [
     nom: "Sylvie Mbarga",
     poste: "Touriste en Suisse",
     texte:
-      "Simple besoin d'un visa touristique, mais N&K Immigration a facilité tout le processus. Service rapide, explications claires et dossier accepté en premier coup. Excellent service!",
+      "Simple besoin d'un visa touristique, mais Ntchoupe Immigration a facilité tout le processus. Service rapide, explications claires et dossier accepté en premier coup. Excellent service!",
     note: 4,
     initiales: "SM",
     couleur: "#B8A76F",

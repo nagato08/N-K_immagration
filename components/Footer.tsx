@@ -76,12 +76,12 @@ const Footer = () => {
                 </span>
               </div>
 
-              <div className="h-24 w-24 rounded-xl mb-4 overflow-hidden">
+              <div className="h-40 w-40 rounded-xl mb-4 overflow-hidden">
                 <Image
                   src="/logo_remove.png"
-                  alt="N&K Immigration Logo"
-                  width={96}
-                  height={96}
+                  alt="Ntchoupe Immigration Logo"
+                  width={160}
+                  height={160}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -259,7 +259,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <div className="h-3.5 w-[1.5px] rounded-full bg-[rgba(184,167,111,0.5)]" />
                 <p className="text-[11.5px] text-white/50">
-                  2026 N&amp;K Immigration Agency — Tous droits réservés.
+                  2026 Ntchoupe Immigration Agency — Tous droits réservés.
                 </p>
               </div>
             </div>

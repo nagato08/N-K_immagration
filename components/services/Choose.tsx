@@ -167,7 +167,7 @@ export default function Choose() {
           </h2>
 
           <p className="font-poppins text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            NK Immigration se distingue par son engagement envers l&apos;excellence, son expérience
+            Ntchoupe Immigration se distingue par son engagement envers l&apos;excellence, son expérience
             reconnue et son dévouement à transformer vos rêves d&apos;immigration en réalité.
           </p>
         </motion.div>

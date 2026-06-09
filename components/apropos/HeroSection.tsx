@@ -38,7 +38,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 overflow-hidden">
         <Image
           src="/images/hero_about.png"
-          alt="NK Immigration – À propos"
+          alt="Ntchoupe Immigration – À propos"
           fill
           priority
           className="object-cover hero-img"
@@ -96,7 +96,7 @@ export default function HeroSection() {
               fontWeight: 700,
             }}
           >
-            N&K <span className="shimmer-gold">Immigration Agency</span>
+            Ntchoupe <span className="shimmer-gold">Immigration Agency</span>
           </h1>
 
           {/* Sous-titre */}

@@ -5,6 +5,7 @@ import Service from "@/components/acceuil/Service";
 import Destination from "@/components/acceuil/Destination";
 import Client from "@/components/acceuil/Client";
 import Cta from "@/components/acceuil/Cta";
+import CtaSupplyChain from "@/components/acceuil/CtaSupplyChain";
 
 export default function AccueilPage() {
   return (
@@ -16,6 +17,7 @@ export default function AccueilPage() {
       <Destination />
       <Cta />
       <Client />
+      <CtaSupplyChain />
     </main>
   );
 }

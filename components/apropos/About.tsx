@@ -54,8 +54,8 @@ const About = () => {
 
           {/* Intro pleine largeur */}
           <p className="ad-u1 text-[clamp(0.9rem,1.25vw,1.05rem)] font-medium text-gray-800 leading-relaxed text-justify mb-5">
-            N&K Immigration Agency est une agence spécialisée dans l&apos;accompagnement complet des projets d&apos;immigration.
-            Forte d&apos;une expertise solide et d&apos;une approche innovante, N&K Immigration accompagne ses clients à chaque étape
+            Ntchoupe Immigration Agency est une agence spécialisée dans l&apos;accompagnement complet des projets d&apos;immigration.
+            Forte d&apos;une expertise solide et d&apos;une approche innovante, Ntchoupe Immigration accompagne ses clients à chaque étape
             de leurs démarches administratives avec professionnalisme, rigueur et transparence. Nous offrons une gamme complète
             de services couvrant les visas de travail, d&apos;études, touristiques et d&apos;affaires.
           </p>
@@ -68,7 +68,7 @@ const About = () => {
               <div className="relative w-70 h-87 overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/pdg.jpeg"
-                  alt="PDG N&K Immigration"
+                  alt="PDG Ntchoupe Immigration"
                   width={300}
                   height={380}
                   className="object-cover w-full h-full"
@@ -84,7 +84,7 @@ const About = () => {
                 {/* Nom en bas à gauche */}
                 <div className="absolute bottom-3 left-4 z-10">
                   <p className="text-white font-black text-sm leading-tight drop-shadow-md">
-                    N&K Immigration
+                    Ntchoupe Immigration
                   </p>
                   <p className="text-white/90 text-[11px] font-medium mt-0.5">
                     Leadership &amp; Expertise

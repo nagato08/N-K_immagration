@@ -48,7 +48,7 @@ export default function Navbar() {
             <Link href="/acceuil" className="flex items-center gap-2">
               <Image
                 src="/logo_remove.png"
-                alt="NK Immigration"
+                alt="Ntchoupe Immigration"
                 width={50}
                 height={40}
                 className="object-contain"

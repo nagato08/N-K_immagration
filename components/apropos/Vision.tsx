@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const CENTRAL_PROMISE = {
   title: "Réaliser vos rêves d'immigration avec expertise et confiance.",
-  desc: "De la consultation initiale à l'obtention de votre visa, N&K Immigration structure chaque étape de votre parcours avec rigueur, transparence et un accompagnement personnalisé reconnu.",
+  desc: "De la consultation initiale à l'obtention de votre visa, Ntchoupe Immigration structure chaque étape de votre parcours avec rigueur, transparence et un accompagnement personnalisé reconnu.",
 };
 
 const PILLARS = [
@@ -177,7 +177,7 @@ const Vision = () => {
             <div className="mt-4 flex items-center justify-center gap-2">
               <div className="h-px w-8" style={{ background: "#B8A76F" }} />
               <span className="text-xs font-medium uppercase tracking-wider" style={{ color: "#1A2B5F" }}>
-                N&K Immigration Agency
+                Ntchoupe Immigration Agency
               </span>
             </div>
           </div>
