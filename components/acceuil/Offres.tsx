@@ -5,11 +5,11 @@ import Image from "next/image";
 import { X } from "lucide-react";
 
 const AFFICHE_SELECTION = [
-  "/images/affiche3.jpeg",
-  "/images/affiche7.jpeg",
-  "/images/affiche.jpeg",
-  "/images/affiche10.jpeg",
-  "/images/affiche5.jpeg",
+  "/images/flyers/flyer2.jpg", // Travailler en Italie
+  "/images/flyers/flyer6.jpg", // Étudier en Russie
+  "/images/flyers/flyer3.jpg", // Canada contrat de travail (centre)
+  "/images/flyers/flyer4.jpg", // Visa étudiant Chine
+  "/images/flyers/flyer8.jpg", // Travail en Turquie
 ];
 
 export default function Offres() {

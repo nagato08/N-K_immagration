@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
+import { FLYERS } from "@/lib/offres";
 
 type ImageCategory = "all" | "affiches" | "certificats" | "visa";
 
@@ -14,24 +15,8 @@ interface GalleryImage {
 }
 
 const GALLERY_IMAGES: GalleryImage[] = [
-  // Affiches
-  { id: "affiche1", src: "/images/affiche.jpeg", alt: "Affiche 1", category: "affiches" },
-  { id: "affiche2", src: "/images/affiche2.jpeg", alt: "Affiche 2", category: "affiches" },
-  { id: "affiche3", src: "/images/affiche3.jpeg", alt: "Affiche 3", category: "affiches" },
-  { id: "affiche4", src: "/images/affiche4.jpeg", alt: "Affiche 4", category: "affiches" },
-  { id: "affiche5", src: "/images/affiche5.jpeg", alt: "Affiche 5", category: "affiches" },
-  { id: "affiche6", src: "/images/affiche6.jpeg", alt: "Affiche 6", category: "affiches" },
-  { id: "affiche7", src: "/images/affiche7.jpeg", alt: "Affiche 7", category: "affiches" },
-  { id: "affiche8", src: "/images/affiche8.jpeg", alt: "Affiche 8", category: "affiches" },
-  { id: "affiche9", src: "/images/affiche9.jpeg", alt: "Affiche 9", category: "affiches" },
-  { id: "affiche10", src: "/images/affiche10.jpeg", alt: "Affiche 10", category: "affiches" },
-  { id: "affiche11", src: "/images/affiche11.jpeg", alt: "Affiche 11", category: "affiches" },
-  { id: "affiche12", src: "/images/affiche12.jpeg", alt: "Affiche 12", category: "affiches" },
-  { id: "affiche13", src: "/images/affiche13.jpeg", alt: "Affiche 13", category: "affiches" },
-  { id: "affiche14", src: "/images/affiche14.jpeg", alt: "Affiche 14", category: "affiches" },
-  { id: "affiche15", src: "/images/affiche15.jpeg", alt: "Affiche 15", category: "affiches" },
-  { id: "affiche16", src: "/images/affiche16.jpeg", alt: "Affiche 16", category: "affiches" },
-  { id: "affiche17", src: "/images/affiche17.jpeg", alt: "Affiche 17", category: "affiches" },
+  // Affiches 2026
+  ...FLYERS.map((f) => ({ id: f.id, src: f.src, alt: f.alt, category: "affiches" as const })),
 
   // Certificats
   { id: "cert1", src: "/images/certificat.jpeg", alt: "Certificat 1", category: "certificats" },
@@ -146,6 +131,7 @@ export default function GalerieGrid() {
         .gallery-image-wrapper img {
           transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
           object-fit: cover;
+          object-position: top;
         }
 
         .gallery-image-wrapper:hover img {

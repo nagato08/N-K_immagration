@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -26,8 +25,8 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="font-poppins text-lg sm:text-xl text-gray-100 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Avec plus de 2 ans d&apos;expérience et 20+ dossiers traités avec succès,
-            nous transformons vos rêves d&apos;immigration en réalité.
+            Votre partenaire pour vos projets de mobilité internationale. Travail, études, tourisme et affaires
+            vers l&apos;Italie, le Canada, la Chine, la Russie et la Turquie.
           </p>
 
           {/* Buttons */}
@@ -78,7 +77,7 @@ export default function HeroSection() {
               <p className="font-poppins text-sm text-gray-200 mt-1">Dossiers réussis</p>
             </div>
             <div className="text-center">
-              <p className="font-poppins text-3xl font-bold text-amber-400">14+</p>
+              <p className="font-poppins text-3xl font-bold text-amber-400">5</p>
               <p className="font-poppins text-sm text-gray-200 mt-1">Destinations</p>
             </div>
             <div className="text-center">

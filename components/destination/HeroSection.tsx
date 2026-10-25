@@ -135,7 +135,7 @@ export default function HeroSection() {
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" style={{ stroke: "#B8A76F" }} />
                   </svg>
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">10+</div>
+                    <div className="text-2xl font-bold text-gray-900">5</div>
                     <div className="text-sm text-gray-600">Destinations servies</div>
                   </div>
                 </div>

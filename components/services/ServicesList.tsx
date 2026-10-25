@@ -12,39 +12,39 @@ interface Service {
 
 const SERVICES: Service[] = [
   {
-    title: "Visa de Travail",
+    title: "Visa de Travail avec contrat",
     description:
-      "Concrétisez votre carrière internationale avec notre service d'assistance pour visa de travail. Nous vous guidons dans les démarches administratives et la préparation de dossiers auprès des employeurs à l'étranger.",
-    destinations: ["Allemagne", "France", "Pologne", "Lituanie", "Bulgarie", "Turquie", "Russie"],
+      "Concrétisez votre carrière internationale : étude de votre profil, recherche d'un employeur via nos partenaires, obtention du contrat de travail, démarches de visa et préparation au départ.",
+    destinations: ["Italie", "Canada", "Turquie"],
     benefits: [
-      "Assistance complète du début à la fin",
-      "Négociation avec les employeurs",
-      "Préparation de tous les documents",
-      "Suivi du dossier en temps réel",
+      "Offres d'emploi réelles et vérifiées",
+      "Recherche d'employeur et obtention du contrat",
+      "Préparation complète du dossier de visa",
+      "Suivi jusqu'au départ et assistance à l'arrivée",
     ],
   },
   {
     title: "Visa d'Études",
     description:
-      "Accédez aux meilleures universités du monde avec notre service spécialisé en visa d'études. Nous assistons les candidats dans le processus d'admission et de demande de visa.",
-    destinations: ["Australie", "Belgique", "Malaisie", "Nouvelle-Zélande", "Russie"],
+      "Accédez à des universités reconnues en Chine et en Russie (plus de 900 universités) : choix du programme, admission, invitation, légalisation des documents et demande de visa.",
+    destinations: ["Chine", "Russie"],
     benefits: [
-      "Sélection d'universités adaptées",
-      "Assistance aux demandes d'admission",
-      "Préparation dossier financier",
-      "Conseil en financement d'études",
+      "Choix de l'université et du programme adapté",
+      "Demande d'admission et obtention de l'invitation",
+      "Traduction et légalisation des documents",
+      "Préparation à l'entretien et conseils avant le départ",
     ],
   },
   {
     title: "Visa Touristique & Affaires",
     description:
-      "Explorez le monde ou développez vos opportunités commerciales. Notre service couvre l'assistance pour visa touristique et visa d'affaires pour vos déplacements internationaux.",
-    destinations: ["Espagne", "France", "Géorgie", "Suisse", "Thaïlande"],
+      "Explorez le monde ou développez vos opportunités commerciales : visa touristique pour l'Italie et la Russie, visa d'affaires pour la Chine (salons, prospection, visites d'entreprises).",
+    destinations: ["Italie", "Russie", "Chine"],
     benefits: [
-      "Traitement rapide des dossiers",
-      "Documentation touristique complète",
-      "Lettre d'invitation professionnelle",
-      "Soutien logistique",
+      "Orientation et vérification des documents",
+      "Lettre d'invitation touristique ou d'affaires",
+      "Conseils pour le voyage (réservation, séjour)",
+      "Suivi jusqu'à l'obtention du visa",
     ],
   },
 ];

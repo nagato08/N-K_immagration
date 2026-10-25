@@ -4,14 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const destinations = [
-  { name: "Canada", image: "/images/destination_img.png" },
-  { name: "Australie", image: "/images/australie.jpeg" },
-  { name: "Nouvelle-Zélande", image: "/images/nouvelle-zelande.jpeg" },
-  { name: "Suisse", image: "/images/suisse.jpeg" },
-  { name: "France", image: "/images/france.jpeg" },
-  { name: "Allemagne", image: "/images/allemagne.jpeg" },
-  { name: "Thaïlande", image: "/images/thailande.jpeg" },
-  { name: "Malaisie", image: "/images/malaisie.jpeg" },
+  { name: "Italie", image: "/images/italie.jpeg" },
+  { name: "Canada", image: "/images/canada.jpeg" },
+  { name: "Chine", image: "/images/chine.jpeg" },
+  { name: "Russie", image: "/images/russie.jpeg" },
+  { name: "Turquie", image: "/images/turquie.jpeg" },
 ];
 
 const duplicated = [...destinations, ...destinations];
@@ -44,7 +41,7 @@ export default function Destination() {
             {duplicated.map((item, index) => (
               <div
                 key={index}
-                className="w-48 h-40 flex-shrink-0 rounded-xl bg-white
+                className="w-48 h-40 shrink-0 rounded-xl bg-white
                            shadow-md hover:shadow-xl
                            transition-all duration-300
                            hover:-translate-y-3 hover:scale-105

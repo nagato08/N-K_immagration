@@ -8,33 +8,23 @@ const CONTINENTS = [
     name: "Découvrez nos destinations en Europe",
     region: "europe",
     countries: [
-      { name: "France", image: "/images/france.jpeg", desc: "Pays de culture, gastronomie et innovation. La France offre une richesse unique de traditions et de modernité." },
-      { name: "Allemagne", image: "/images/allemagne.jpeg", desc: "Pays d\u2019industrie et de histoire. L\u2019Allemagne offre des villes modernes et un patrimoine culturel riche." },
-      { name: "Belgique", image: "/images/belgique.jpeg", desc: "Carrefour de l\u2019Europe reconnu pour ses institutions internationales et ses villes dynamiques." },
-      { name: "Espagne", image: "/images/espagne.jpeg", desc: "Culture vibrante, plages ensoleillées et style de vie méditerranéen incomparable." },
-      { name: "Suisse", image: "/images/suisse.jpeg", desc: "Paysages alpins spectaculaires et opportunités professionnelles de prestige." },
-      { name: "Pologne", image: "/images/pologne.jpeg", desc: "Économie en pleine croissance avec des opportunités de travail diversifiées." },
-      { name: "Lituanie", image: "/images/lituanie.jpeg", desc: "Technologie et innovations au cœur des pays baltes en plein essor." },
-      { name: "Bulgarie", image: "/images/bulgarie.jpeg", desc: "Coût de vie abordable et secteur technologique florissant en Europe de l\u2019Est." },
-      { name: "Géorgie", image: "/images/georgie.jpeg", desc: "Destination émergente avec un charme unique entre Europe et Asie." },
+      { name: "Italie", image: "/images/italie.jpeg", desc: "Visa touristique et contrat de travail (visa national D). Bâtiment, industrie, santé, agriculture, hôtellerie et restauration." },
+      { name: "Russie", image: "/images/russie.jpeg", desc: "Études 2026/2027 dans plus de 900 universités et visa touristique pour Moscou, Saint-Pétersbourg et bien plus." },
+      { name: "Turquie", image: "/images/turquie.jpeg", desc: "Travail avec contrat : manutention, magasinage, hôtellerie, commerce et restauration. Salaire estimé 350 000 à 475 000 XAF." },
+    ],
+  },
+  {
+    name: "Découvrez nos destinations en Amérique du Nord",
+    region: "america",
+    countries: [
+      { name: "Canada", image: "/images/canada.jpeg", desc: "Contrat de travail et accompagnement complet : construction, agriculture, industrie, restauration, santé, logistique." },
     ],
   },
   {
     name: "Découvrez nos destinations en Asie",
     region: "asia",
     countries: [
-      { name: "Turquie", image: "/images/turquie.jpeg", desc: "Pont entre l\u2019Europe et l\u2019Asie avec des opportunités uniques et une culture millénaire." },
-      { name: "Russie", image: "/images/russie.jpeg", desc: "Vaste territoire aux opportunités académiques et professionnelles variées." },
-      { name: "Malaisie", image: "/images/malaisie.jpeg", desc: "Hub éducatif d\u2019Asie du Sud-Est avec des universités internationalement réputées." },
-      { name: "Thaïlande", image: "/images/thailande.jpeg", desc: "Aventure tropicale et opportunités d\u2019affaires dans un cadre exotique." },
-    ],
-  },
-  {
-    name: "Découvrez nos destinations en Océanie",
-    region: "oceania",
-    countries: [
-      { name: "Australie", image: "/images/australie.jpeg", desc: "Universités de classe mondiale et qualité de vie exceptionnelle au bout du monde." },
-      { name: "Nouvelle-Zélande", image: "/images/nouvelle-zelande.jpeg", desc: "Éducation de qualité dans un environnement naturel idyllique et accueillant." },
+      { name: "Chine", image: "/images/chine.jpeg", desc: "Visa étudiant et visa d\u2019affaires : universités reconnues, frais compétitifs, salons et prospection de partenaires." },
     ],
   },
 ];

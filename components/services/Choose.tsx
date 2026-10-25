@@ -61,8 +61,8 @@ const REASONS: Reason[] = [
     icon: TrendingUp,
     title: "Destinations Multiples",
     description:
-      "Couverture de 14+ destinations internationales pour tous types de visas.",
-    stat: "14+",
+      "Italie, Canada, Chine, Russie et Turquie : travail, études, tourisme et affaires.",
+    stat: "5",
     highlight: "destinations couvertes",
   },
 ];

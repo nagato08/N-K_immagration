@@ -1,8 +1,9 @@
 "use client";
 
-import { Phone, Mail, MessageCircle, ArrowRight, MapPin } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { SITE, WHATSAPP_DEFAULT } from "@/lib/site";
 
 const FacebookIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -32,7 +33,7 @@ const Footer = () => {
 
   const socials = [
     { label: "Facebook", icon: FacebookIcon, href: "#" },
-    { label: "WhatsApp", icon: MessageCircle, href:"https://wa.me/237688694728?text=Salut%20je%20viens%20du%20site%20N%26K%20Immigration%20et%20j%27aimerai%20avoir%20plus%20d%27information" },
+    { label: "WhatsApp", icon: MessageCircle, href: WHATSAPP_DEFAULT },
   ];
 
   return (
@@ -72,7 +73,7 @@ const Footer = () => {
             <div className="lg:col-span-4">
               <div className="mb-4">
                 <span className="text-[12px] tracking-[0.35em] uppercase font-medium text-[rgba(184,167,111,0.7)]">
-                  L&apos;immigration c&apos;est notre affaire
+                  {SITE.tagline}
                 </span>
               </div>
 
@@ -93,7 +94,7 @@ const Footer = () => {
               </div>
 
               <p className="text-[13.5px] leading-[1.8] mb-5 max-w-xs text-white/80">
-                Agence d&apos;immigration spécialisée dans l&apos;accompagnement personnalisé. Visa travail, études, tourisme et affaires. La réussite c&apos;est la vôtre.
+                Agence d&apos;immigration spécialisée dans l&apos;accompagnement personnalisé. Visa travail, études, tourisme et affaires vers l&apos;Italie, le Canada, la Chine, la Russie et la Turquie. L&apos;immigration c&apos;est notre affaire, la réussite c&apos;est la vôtre.
               </p>
 
               {/* Socials */}
@@ -179,8 +180,8 @@ const Footer = () => {
                     <span className="block text-[12px] tracking-widest uppercase mb-0.5 text-white/25">
                       Téléphone (Cameroun)
                     </span>
-                    <a href="tel:+237688694728" className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200">
-                      +237 688 69 47 28
+                    <a href={`tel:${SITE.phoneIntl}`} className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200">
+                      {SITE.phoneDisplay}
                     </a>
                   </div>
                 </li>
@@ -194,8 +195,8 @@ const Footer = () => {
                     <span className="block text-[12px] tracking-widest uppercase mb-0.5 text-white/25">
                       Téléphone (France)
                     </span>
-                    <a href="tel:+33756830918" className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200">
-                      +33 756 83 09 18
+                    <a href={`tel:${SITE.phoneFranceIntl}`} className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200">
+                      {SITE.phoneFranceDisplay}
                     </a>
                   </div>
                 </li>
@@ -209,9 +210,13 @@ const Footer = () => {
                     <span className="block text-[12px] tracking-widest uppercase mb-0.5 text-white/25">
                       WhatsApp
                     </span>
-                    <a href="https://wa.me/237688694728?text=Salut%20je%20viens%20du%20site%20N%26K%20Immigration%20et%20j%27aimerai%20avoir%20plus%20d%27information"
-               className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200">
-                      +237 688 69 47 28
+                    <a
+                      href={WHATSAPP_DEFAULT}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200"
+                    >
+                      {SITE.phoneDisplay}
                     </a>
                   </div>
                 </li>
@@ -225,8 +230,8 @@ const Footer = () => {
                     <span className="block text-[12px] tracking-widest uppercase mb-0.5 text-white/25">
                       Email
                     </span>
-                    <a href="mailto:info@nkimmigration.com" className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200 break-all">
-                      info@nkimmigration.com
+                    <a href={`mailto:${SITE.email}`} className="ftr-link text-white/80 text-[13px] leading-[1.6] hover:text-[#B8A76F] transition-colors duration-200 break-all">
+                      {SITE.email}
                     </a>
                   </div>
                 </li>
@@ -244,7 +249,7 @@ const Footer = () => {
                       Horaires
                     </span>
                     <span className="text-white/80 text-[13px] leading-[1.6]">
-                      Lun – Ven : 8h00 – 18h00
+                      Lun – Ven : 7h30 – 17h30
                     </span>
                   </div>
                 </li>

@@ -13,12 +13,12 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Quel est le délai moyen pour obtenir un visa?",
     answer:
-      "Le délai varie selon le type de visa et le pays destination. En général, les délais varient de 2 à 6 mois. Notre équipe vous fournira une estimation précise lors de la consultation initiale en fonction de votre situation.",
+      "Le délai varie selon le type de visa et le pays destination. À titre indicatif, une procédure d'études en Russie dure environ 2 à 3 mois (invitation sous 7 à 45 jours). Les visas de travail avec contrat peuvent prendre plus de temps selon la recherche d'employeur. Notre équipe vous fournira une estimation précise lors de la consultation initiale.",
   },
   {
     question: "Quels documents dois-je préparer?",
     answer:
-      "Cela dépend du type de visa. En général, vous aurez besoin d'un passeport valide, d'une lettre de motivation, de preuves financières, et de documents spécifiques au programme (offre d'emploi, lettre d'admission, etc.). Nous vous fournirons une liste complète personnalisée.",
+      "Cela dépend du type de visa et du pays. En général : passeport valide, carte nationale d'identité, photos d'identité, acte de naissance, et des documents spécifiques (CV et contrat de travail pour un visa de travail, diplômes et relevés de notes pour un visa d'études, justificatifs financiers et d'attaches au Cameroun pour un visa touristique). Nous vous fournirons une liste complète personnalisée.",
   },
   {
     question: "Combien coûte votre service?",
@@ -33,7 +33,7 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Puis-je demander un visa pour un autre pays?",
     answer:
-      "Oui! Nous couvrons 14+ destinations internationales incluant la France, l'Allemagne, l'Australie, le Canada et bien d'autres. Si votre destination n'est pas listée, contactez-nous pour discuter des possibilités.",
+      "Oui! Nos programmes 2026 couvrent l'Italie, le Canada, la Chine, la Russie et la Turquie. Si votre destination n'est pas listée, contactez-nous pour discuter des possibilités.",
   },
   {
     question: "Que se passe-t-il après l'obtention de mon visa?",

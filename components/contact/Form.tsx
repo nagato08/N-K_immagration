@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { SITE, whatsappUrl } from "@/lib/site";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -104,11 +105,20 @@ const Form = () => {
 
     try {
       // Formater le message pour WhatsApp
-      const message = `*Nouveau Message de Contact*%0A%0A*Nom:* ${encodeURIComponent(formData.name)}%0A*Téléphone:* ${encodeURIComponent(formData.number)}%0A*Email:* ${encodeURIComponent(formData.email)}%0A*Ville:* ${encodeURIComponent(formData.ville)}%0A%0A*Message:*%0A${encodeURIComponent(formData.message)}`;
+      const message = [
+        "*Nouveau Message de Contact*",
+        "",
+        `*Nom:* ${formData.name}`,
+        `*Téléphone:* ${formData.number}`,
+        `*Email:* ${formData.email}`,
+        `*Ville:* ${formData.ville}`,
+        "",
+        "*Message:*",
+        formData.message,
+      ].join("\n");
 
       // Ouvrir WhatsApp avec le message
-      const whatsappUrl = `https://wa.me/237688694728?text=${message}`;
-      window.open(whatsappUrl, "_blank");
+      window.open(whatsappUrl(message), "_blank");
 
       alert("Redirection vers WhatsApp en cours...");
       setFormData({
@@ -118,7 +128,7 @@ const Form = () => {
         number: "",
         ville: "",
       });
-    } catch (error) {
+    } catch {
       alert("Une erreur est survenue. Veuillez réessayer plus tard.");
     } finally {
       setIsSubmitting(false);
@@ -376,7 +386,7 @@ const Form = () => {
               <div className="space-y-4">
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/237688694728?text=Salut%20je%20suis%20intéressé%20par%20vos%20services%20d'immigration"
+                  href={whatsappUrl("Bonjour, je suis intéressé(e) par vos services d'immigration.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
@@ -388,7 +398,7 @@ const Form = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">WhatsApp</p>
-                    <p className="font-semibold text-gray-900">+237 688 69 47 28</p>
+                    <p className="font-semibold text-gray-900">{SITE.phoneDisplay}</p>
                   </div>
                 </a>
 
@@ -401,7 +411,9 @@ const Form = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Téléphone</p>
-                    <p className="font-semibold text-gray-900">+237 688 69 47 28</p>
+                    <p className="font-semibold text-gray-900">
+                      <a href={`tel:${SITE.phoneIntl}`}>{SITE.phoneDisplay}</a>
+                    </p>
                   </div>
                 </div>
 
@@ -414,7 +426,9 @@ const Form = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
-                    <p className="font-semibold text-gray-900">contact@nk-immigration.com</p>
+                    <p className="font-semibold text-gray-900 break-all">
+                      <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+                    </p>
                   </div>
                 </div>
 
